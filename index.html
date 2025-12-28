@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dhanraj Kamble | Cyber Security Portfolio</title>
+
+<style>
+:root {
+  --primary: #0a2540;
+  --accent: #00d084;
+  --text: #1f2933;
+  --light: #f8fafc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: var(--light);
+  color: var(--text);
+}
+
+/* ================= HEADER ================= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 45px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* ================= HERO ================= */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 90px 80px;
+  gap: 50px;
+}
+
+.hero-text h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+}
+
+.hero-text span {
+  color: var(--accent);
+}
+
+.hero-text p {
+  margin: 20px 0;
+  max-width: 520px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  margin-top: 25px;
+}
+
+.hero-buttons a {
+  padding: 12px 25px;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-right: 15px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.hero-buttons a:hover {
+  opacity: 0.85;
+}
+
+.hero img {
+  max-width: 420px;
+}
+
+/* ================= SECTIONS ================= */
+section {
+  padding: 80px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: var(--primary);
+}
+
+/* ================= ABOUT ================= */
+.about p {
+  max-width: 900px;
+  line-height: 1.7;
+}
+
+/* ================= PROJECTS ================= */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-card h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+/* ================= CONTACT ================= */
+.contact p {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+.contact a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #f1f5f9;
+  font-size: 0.9rem;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="Orbitcyte Logo">
+  </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h1>Hi, I'm <span>Dhanraj Kamble</span></h1>
+    <p>
+      Cyber Security Analyst specializing in threat detection, incident response,
+      and security monitoring. Protecting systems, networks, and data from modern cyber threats.
+    </p>
+    <div class="hero-buttons">
+      <a href="#projects">View My Work</a>
+    </div>
+  </div>
+
+  <img src="hero.png" alt="Cyber Security">
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <h2 class="section-title">About Me</h2>
+  <p>
+    Security Analyst with strong experience in SIEM monitoring, threat detection,
+    incident response, and vulnerability analysis. Skilled in identifying security
+    risks, analyzing attacker behavior, and implementing remediation strategies.
+  </p>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <h3>Tempest – Workstation Compromise</h3>
+      <p>Investigated compromised systems, analyzed malware behavior, extracted IOCs, and recommended remediation strategies.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Boogeyman Series</h3>
+      <p>Performed SIEM log analysis, mapped attacks to MITRE ATT&CK, and documented incident response actions.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Hidden Hooks</h3>
+      <p>Detected malicious scripts, privilege escalation, and abnormal network activity in SOC simulation.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Open Door</h3>
+      <p>Investigated leaked credentials, analyzed login behavior, and recommended MFA and access controls.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <h2 class="section-title">Contact</h2>
+  <p>Email: <a href="mailto:dhanrajkamble3518@gmail.com">dhanrajkamble3518@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/dhanraj-kamble-b73b79224/" target="_blank">View Profile</a></p>
+  <p>GitHub: <a href="https://github.com/DhanrajKamble" target="_blank">github.com/DhanrajKamble</a></p>
+</section>
+
+<footer>
+  © 2025 Dhanraj Kamble | Cyber Security Portfolio
+</footer>
+
+</body>
+</html>
